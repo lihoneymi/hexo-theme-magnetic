@@ -1,16 +1,18 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
+  返回: https://www.litofu.com/
+  # Archives: /archives
 
 # Default post title
-default_post_title: Untitled
+default_post_title: 未命名
 
 # Default post cover index page
-default_cover_index: "http://placehold.it/450x450"
+# default_cover_index: "http://placehold.it/450x450"
+default_cover_index: "/images/load.svg"
 
 # Default post cover index page
-default_cover_detail: "http://placehold.it/1300x500"
+# default_cover_detail: "http://placehold.it/1300x500"
+default_cover_detail: "/images/load.svg"
 
 # Favicon
 favicon: ""
@@ -38,11 +40,11 @@ comments:
 google_analytics:
 
 # Social Accounts
-twitter_url:
-facebook_url: https://www.facebook.com/
-behance_url: https://www.behance.net/
-googleplus_url: https://plus.google.com/+Pixelhint/posts
-dribble_url: https://dribbble.com/pixelhint
-rss_url:
-instagram_url:
-youtube_url:
+#twitter_url:
+#facebook_url: https://www.facebook.com/
+#behance_url: https://www.behance.net/
+#googleplus_url: https://plus.google.com/+Pixelhint/posts
+#dribble_url: https://dribbble.com/pixelhint
+#rss_url:
+#instagram_url:
+#youtube_url:

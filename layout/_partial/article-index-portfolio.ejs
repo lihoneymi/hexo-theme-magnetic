@@ -1,0 +1,17 @@
+<!--
+<div class="work">
+	<% if (item.cover_index) {%>
+			<img src="<%- item.cover_index || theme.default_cover_index %>" class="media">
+	<% } %>
+</div>
+-->
+
+<% if (item.photos && item.photos.length){ %>
+	<% if (item.photos.length){ %>
+		<% item.photos.forEach(function(photo){ %>
+			<div class="work">
+				<img src="<%- photo %>" class="media" />
+			</div>
+		<% }); %>
+	<% } %>
+<% } %>

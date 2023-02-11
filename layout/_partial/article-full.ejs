@@ -1,30 +1,40 @@
-<section class="main clearfix">
+<!-- Gallery MOVE FROM MAIN -->
+<% if (item.photos && item.photos.length){ %>
+	<% if (item.photos.length){ %>
+		<% item.photos.forEach(function(photo){ %>
+			<div class="work">
+				<a href="#" data-featherlight="<%- photo %>">
+					<img src="<%- photo %>" class="media" />
+				</a>
+			</div>
+		<% }); %>
+	<% } %>
+<% } else {%>
+	<section class="top" style="background: url('<%- item.cover_detail || theme.default_cover_detail %>');">
+		<div class="wrapper content_header clearfix">
+			<%- partial('article-full-nav', {item: item}) %>
+			<h1 class="title"><%- item.title || theme.default_post_title || "Untitled" %></h1>
+		</div>
+	</section><!-- end top -->
 
-    <section class="top" style="background: url('<%- item.cover_detail || theme.default_cover_detail %>');">
-        <div class="wrapper content_header clearfix">
-            <%- partial('article-full-nav', {item: item}) %>
-            <h1 class="title"><%- item.title || theme.default_post_title || "Untitled" %></h1>
-        </div>
-    </section><!-- end top -->
+	<section class="wrapper">
+		<div class="content">
 
-    <section class="wrapper">
-        <div class="content">
+			<!-- Gallery -->
+			<% if (item.photos && item.photos.length){ %>
+				<%- partial('gallery') %>
+			<% } %>
 
-            <!-- Gallery -->
-            <% if (item.photos && item.photos.length){ %>
-                <%- partial('gallery') %>
-            <% } %>
+			<!-- Content -->
+			<%- item.content %>
 
-            <!-- Content -->
-            <%- item.content %>
+			<!-- Tags -->
+			<%- partial('article-tags') %>
 
-            <!-- Tags -->
-            <%- partial('article-tags') %>
-
-            <!-- Comments -->
-            <div>
-                <%- partial("_partial/comments.ejs") %>
-            </div>
-        </div><!-- end content -->
-    </section>
-</section><!-- end main -->
+			<!-- Comments -->
+			<div>
+				<%- partial("_partial/comments.ejs") %>
+			</div>
+		</div><!-- end content -->
+	</section>
+<% } %>
