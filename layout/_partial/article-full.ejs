@@ -1,15 +1,4 @@
-<!-- Gallery MOVE FROM MAIN -->
-<% if (item.photos && item.photos.length){ %>
-	<% if (item.photos.length){ %>
-		<% item.photos.forEach(function(photo){ %>
-			<div class="work">
-				<a href="#" data-featherlight="<%- photo %>">
-					<img src="<%- photo %>" class="media" />
-				</a>
-			</div>
-		<% }); %>
-	<% } %>
-<% } else {%>
+
 	<section class="top" style="background: url('<%- item.cover_detail || theme.default_cover_detail %>');">
 		<div class="wrapper content_header clearfix">
 			<%- partial('article-full-nav', {item: item}) %>
@@ -37,4 +26,18 @@
 			</div>
 		</div><!-- end content -->
 	</section>
+<!-- Gallery MOVE FROM MAIN
+<% if (item.photos && item.photos.length){ %>
+	<% if (item.photos.length){ %>
+		<% item.photos.forEach(function(photo){ %>
+			<div class="work">
+				<a href="#" data-featherlight="<%- photo %>">
+					<img src="<%- photo %>" class="media" />
+				</a>
+			</div>
+		<% }); %>
+	<% } %>
+<% } else {%>
+
 <% } %>
+-->
