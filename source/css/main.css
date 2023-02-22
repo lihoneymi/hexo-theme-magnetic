@@ -305,6 +305,15 @@ h5, h6          { font-weight: bolder }
     overflow: hidden;
 }
 
+.main .work-full{
+    display: block;
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
 .main .pagination-container{
     display: block;
     width: 100%;
@@ -341,7 +350,7 @@ h5, h6          { font-weight: bolder }
     color: #969595;
 }
 
-.main .work .media{
+.main .work .media, .main .work-full .media {
     width: 100%;
     vertical-align: middle;
 }
